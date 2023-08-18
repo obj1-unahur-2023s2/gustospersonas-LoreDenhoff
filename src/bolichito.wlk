@@ -1,5 +1,7 @@
 import objetos.*
 import personas.*
+import materiales.*
+import colores.*
 
 object bolichito {
 	var vidrieria
@@ -8,7 +10,7 @@ object bolichito {
 	method vidrieria(objetoVidrieria) {vidrieria = objetoVidrieria}
 	method mostrador(objetoMostrador) {mostrador = objetoMostrador}
 	
-	method esBrillante() = material.brilla(vidrieria.material()) && material.brilla(mostrador.material())
+	method esBrillante() = vidrieria.material().brilla() && mostrador.material().brilla()
 	method esMonocromatico() = vidrieria.color() == mostrador.color()
 	method estaDesequilibrado() = mostrador.peso() > vidrieria.peso()
 	method tieneAlgoDeColor(otroColor) = (vidrieria.color()==otroColor) || (mostrador.color()==otroColor)

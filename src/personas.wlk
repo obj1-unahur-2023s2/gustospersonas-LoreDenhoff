@@ -1,18 +1,20 @@
 import objetos.*
+import colores.*
+import materiales.*
 
 object rosa{
 	method leGusta(unObjeto) = unObjeto.peso() >2000 
 }
 
 object estefania{
-	method leGusta (unObjeto) = color.esFuerte(unObjeto.color())
+	method leGusta (unObjeto) = unObjeto.color().esFuerte()
 }
 
 object luisa{
-	method leGusta (unObjeto) = material.brilla(unObjeto.material())
+	method leGusta (unObjeto) = unObjeto.material().brilla()
 }
 
 object juan{
-	method leGusta (unObjeto) = !color.esFuerte(unObjeto.color()) || unObjeto.peso().between(1200,1800)
+	method leGusta (unObjeto) = !unObjeto.color().esFuerte() || unObjeto.peso().between(1200,1800)
 	
 }
